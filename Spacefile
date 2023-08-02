@@ -1,0 +1,10 @@
+v: 0
+micros:
+  - name: notification-server
+    src: ./
+    run: gunicorn src.main:app
+    dev: gunicorn src.main:app
+    engine: python3.9
+    public_routes:
+      - "/*"
+    primary: true
